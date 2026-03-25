@@ -265,7 +265,7 @@ That's the whole thing.
 
 The ritual opens the channel. The synthesis audits the result. You do the work.
 
-Do this every day for three months. You may not recognize yourself.
+Do this every day for two to four weeks. Most people don't need it after that. They're too busy being someone different.
 
 ---
 
