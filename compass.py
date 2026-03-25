@@ -210,9 +210,9 @@ def single_input(prompt="") -> str:
 
 
 def run_biweekly_session(config: dict) -> dict:
-    print_header("THE COMPASS — Bi-Weekly Session", "═")
+    print_header("THE COMPASS — Daily Session", "═")
     print(f"  {datetime.now().strftime('%A, %B %d, %Y')}")
-    print(f"  Session type: Bi-Weekly Calibration\n")
+    print(f"  Session type: Daily Ritual\n")
 
     responses = {
         "session_date": datetime.now(timezone.utc).isoformat(),
@@ -220,7 +220,7 @@ def run_biweekly_session(config: dict) -> dict:
     }
 
     print_header("1 / 4  —  EVIDENCE LOG")
-    print("  What did you build, ship, or complete in the past two weeks")
+    print("  What did you build, ship, or complete since your last session")
     print("  that didn't exist before? Verifiable outputs only.")
     print("  Not learning, not planning, not starting. Finishes.\n")
     responses["evidence_log"] = multiline_input()
@@ -231,12 +231,12 @@ def run_biweekly_session(config: dict) -> dict:
     responses["drift_audit"] = multiline_input()
 
     print_header("3 / 4  —  SABOTEUR SIGNATURE")
-    print("  Did the internal critic show up in the past two weeks?")
+    print("  Did the internal critic show up today or since last session?")
     print("  In what specific behavioral form?\n")
     responses["saboteur_signature"] = multiline_input()
 
-    print_header("4 / 4  —  NEXT FORTNIGHT'S NON-NEGOTIABLE")
-    print("  One specific output that will exist two weeks from now")
+    print_header("4 / 4  —  NON-NEGOTIABLE")
+    print("  One specific output that will exist at your next session")
     print("  that doesn't exist today. Not a task. An artifact.\n")
     responses["non_negotiable"] = single_input()
 
@@ -279,7 +279,7 @@ def run_quarterly_session(config: dict) -> dict:
     recent = load_recent_sessions(n=6)
     context_block = ""
     if recent:
-        context_block = "\n\nRECENT BI-WEEKLY SESSION SUMMARIES:\n"
+        context_block = "\n\nRECENT SESSION SUMMARIES:\n"
         for s in recent:
             date = s.get("session_date", "")[:10]
             evidence = s.get("evidence_log", "")[:200]
@@ -438,7 +438,6 @@ def main():
 
     print()
     print_header("SESSION COMPLETE", "═")
-    print("  The next session is in 14 days.")
     print("  Your non-negotiable is logged. It will be waiting.\n")
 
 

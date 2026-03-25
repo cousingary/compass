@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Compass — Bi-Weekly Calibration</title>
+  <title>The Compass — Daily Ritual</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -196,7 +196,7 @@
 
     <header>
       <h1>The Compass</h1>
-      <p>Bi-weekly self-calibration. Four questions. One synthesis. No fluff.</p>
+      <p>Daily ritual. Four questions. One synthesis. No fluff.</p>
     </header>
 
     {% if error %}
@@ -281,11 +281,11 @@
         <div class="question-label">
           <span class="question-number">1</span>
           <span class="text">Evidence Log
-            <span class="hint">What did you build, ship, or complete in the past two weeks that didn't exist before?<br>Verifiable outputs only — not learning, not planning. Finishes.</span>
+            <span class="hint">What did you build, ship, or complete since your last session that didn't exist before?<br>Verifiable outputs only — not learning, not planning. Finishes.</span>
           </span>
         </div>
         <textarea name="evidence_log" class="tall"
-                  placeholder="e.g. Did the ritual 9 out of 14 nights. On night 6, the visualization held for the first time without my mind breaking away — I stayed with both vehicles for the full phase. Had a dream on night 8 where I was driving calmly through the city instead of scrambling. Wrote it down immediately.">{{ prefill.evidence_log if prefill else '' }}</textarea>
+                  placeholder="e.g. Did the ritual this morning. The visualization held — I stayed with both vehicles for the full phase without my mind breaking away. Had a dream last night where I was driving calmly through the city instead of scrambling. Wrote it down immediately.">{{ prefill.evidence_log if prefill else '' }}</textarea>
       </div>
 
       <div class="field-group">
@@ -314,7 +314,7 @@
         <div class="question-label">
           <span class="question-number">4</span>
           <span class="text">Non-Negotiable
-            <span class="hint">One specific output that will exist two weeks from now that doesn't exist today. Not a task. An artifact.</span>
+            <span class="hint">One specific output that will exist at your next session that doesn't exist today. Not a task. An artifact.</span>
           </span>
         </div>
         <textarea name="non_negotiable" style="min-height:80px;"

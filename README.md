@@ -1,88 +1,200 @@
 # The Compass
 
-*A bi-weekly self-calibration practice, synthesized by AI.*
+*A daily ritual for people who are ready to stop being who they've been.*
 
 ---
 
-Most systems measure activity.
+## The Origin
 
-The Compass measures signal.
+It started with a dream.
 
----
+In the dream, I was in a big city — chaotic, dense, pressing — trying to move two vehicles at once through traffic I didn't have the capacity to navigate. One was mine: older, reliable, modest. The other was my friend Chad's: a new black truck, clean and confident, the kind of vehicle a man drives when he believes the world will keep giving him things.
 
-## What It Is
+I woke up knowing exactly what the dream was about.
 
-Every two weeks, you sit down with The Compass. You answer four questions. There is no dashboard, no streak counter, no gamification. There is only what you built, where you drifted, how the critic showed up, and what you're committing to next.
+Chad had something I had never been able to build in myself: an abundance mindset. Where I counted and rationed and feared the floor dropping out, Chad just swept things off the table. *There's always more.* He said it casually, the way you'd say anything that was simply true. He wasn't reckless. He was free.
 
-Then Claude reads your answers — not against a productivity framework, but against you. Against your stated tracks, your known time horizon, your identified saboteur patterns. It looks for what's actually being reported underneath what's being said. It names things you didn't name. It ends with a single sentence: the heading for the next two weeks. Not a plan. A direction.
+I had spent years watching people like Chad from the inside of my old car.
 
-You do this every fourteen days.
+That dream was the beginning of a ritual that changed the architecture of who I am. I did it every day. Slowly, then faster than I expected, the patterns that had defined me — the hoarding, the hesitation, the quiet belief that I was not quite the kind of person who gets to have what he wants — began to lose their grip.
 
----
-
-## The Four Questions
-
-**1. Evidence Log**
-What did you build, ship, or complete in the past two weeks that didn't exist before?
-*Not learning. Not planning. Not starting. Finishes.*
-
-**2. Drift Audit**
-Where did your time go that wasn't consistent with your primary track?
-*What was the real reason.*
-
-**3. Saboteur Signature**
-Did your internal critic show up? In what specific behavioral form?
-*Not a feeling. A behavior. Avoidance of highest-leverage work. Overengineering before validating. Seeking approval before shipping. The critic doesn't announce itself — it shows up wearing a different face every cycle. Name the face.*
-
-**4. The Non-Negotiable**
-One specific artifact that will exist two weeks from now that doesn't exist today.
-*Not a task. Not a commitment to try. An artifact.*
+I became an AI engineer. Not because I was talented. Because I stopped being someone who talked himself out of things before he tried them.
 
 ---
 
-## Why These Four
+## What This Is
 
-The Evidence Log is the only question that can't be faked. You either built it or you didn't.
+The Compass is a daily ritual assisted by AI synthesis.
 
-The Drift Audit is the honesty question. The "real reason" qualifier is load-bearing. Without it, you get a description of what happened. With it, you sometimes get the thing underneath — the pattern that's been running for years, just in a different costume.
+It is not a productivity tool. It is not a journaling app. It is not a gratitude practice.
 
-The Saboteur Signature is the hardest question and the most important. The internal critic doesn't show up as a feeling of inadequacy. It shows up as a decision to reorganize files instead of shipping. It shows up as three hours of research that was really avoidance. It shows up as picking a fight the night before a deadline. Name the specific behavioral form it took this cycle. Over months, you start to see the pattern. The pattern is useful.
+It is a structured confrontation with the version of yourself that is quietly running the show — the one built from early experiences of being made small, of learning that resources were scarce and that claiming them was dangerous. That version doesn't announce itself. It operates as *behavior*: the research loop that delays shipping, the joke that derails an important moment, the unnecessary reorganization of things that are already fine.
 
-The Non-Negotiable is a bridge. It exists so that the session isn't just reflection — it's a commitment the next session will audit. The system has memory. What you say here will be waiting.
+The ritual names it. Then it depowers it. Every day.
 
----
-
-## The Synthesis
-
-After you answer the four questions, Claude reads them.
-
-Not to validate. Not to encourage. To synthesize — to find the signal underneath the surface content, surface patterns you aren't naming, and assess whether your non-negotiable is specific enough to actually be meaningful. (Vague non-negotiables are named as vague. This is by design.)
-
-Three synthesis tones are available:
-
-- **Direct** — Peer-level. No hedging. No softening. If something is concerning, it's named precisely. If something is genuine progress, that's named precisely too — not effusively.
-- **Supportive** — Honest but warm. The signal is surfaced, not softened.
-- **Clinical** — Neutral. Analytical. Describes what the data shows. Leaves interpretation to you.
-
-The synthesis ends with a single sentence. The heading for the next two weeks. You don't get a to-do list. You get a direction.
+The AI doesn't fix you. It reflects you — with precision, without judgment, against what you said you were building. Over time, the synthesis becomes a record of transformation. You can watch yourself change.
 
 ---
 
-## Two Sessions
+## The Ritual
 
-**Bi-weekly** — The regular rhythm. Four questions. Synthesis. Heading. Repeat.
-
-**Quarterly** — The elevation view. Once a quarter, you audit the quarter itself: what version of you was operating, what moved strategically, what you'd be ashamed to still be doing in six months, and where you actually are versus where you thought you'd be. The quarterly synthesis is harder. It's supposed to be. Patterns that appeared as isolated data points across bi-weekly sessions become visible signal at this scale.
-
-The quarterly session reads recent bi-weekly sessions as context. It looks for recurrence. What showed up once is an event. What showed up six times is a pattern. The synthesis names patterns.
+This is the full practice. It takes less time than you think. The actions are physical. Do them, don't approximate them.
 
 ---
 
-## Two Interfaces
+### Phase 0. Orientation: Choosing the Form of Abundance
 
-**CLI** (`compass.py`) — Terminal-native. Logs every session to `~/.compass_sessions.jsonl`. Optional integration with a Supabase-backed second brain. No data leaves your machine unless you configure it to.
+**Action:** Stand still. Breathe once.
 
-**Web** (`compass_web.py`) — A stateless Flask app. No data is stored server-side. Each session lives only in your browser. Deploy it on your own VPS, share it with people you trust, and let them run their own sessions. Every person configures their own context, their own tracks, their own saboteur signatures. The synthesis is personalized every time.
+**Line:** *"Let abundance be quiet, steady, and mine."*
+
+**Inner task:** See the vehicle — whatever it means for you — idling calmly. No speed. No performance. Just presence. This is not a performance of abundance. This is the settled, unhurried confidence of someone who knows the world will keep offering.
+
+---
+
+### Phase 1. Descent: Entering the Shadow of the Devalued Child
+
+**Action:** Stand in dim light. Lower your head. Place both hands on your chest.
+
+**Line:** *"I descend into the echo that once defined me."*
+
+**Inner task:** Remember the earliest sensation of being made small. Not a story. A texture. The body knows it. You don't need to narrate it — just let it surface.
+
+---
+
+### Phase 2. Encounter: Facing the Mirror-Self
+
+**Action:** Raise your head. Imagine the figure standing before you — calm, expressionless, eyes unreadable.
+
+**Line:** *"I face the one who knows me without illusion."*
+
+**Inner task:** Allow her neutrality. She doesn't encourage you. She doesn't condemn you. She reflects only what is. This is the most honest relationship you will ever have.
+
+---
+
+### Phase 3. Consumption: Allowing Her to Take You In
+
+**Action:** Breathe in as if your breath enters her body.
+
+**Line:** *"What is mine becomes hers. What is hers becomes mine."*
+
+**Inner task:** Let yourself be absorbed, not erased. This is union-through-knowing. You are not disappearing. You are being fully seen — which is different.
+
+---
+
+### Phase 4. Confrontation: Meeting the Parasite of Value-Inversion
+
+**Action:** Place one hand over your solar plexus. Imagine a dim, trembling voice trying to cling to you.
+
+**Line:** *"Your dependence ends now."*
+
+**Inner task:** Do not fight it. Fighting it feeds it. Instead, see it as weightless — a program running on a machine that no longer has power. It needed your fear to operate. You are not afraid of it anymore. It becomes what it always was: noise.
+
+---
+
+### Phase 5. Dissolution: Hearing the Earth's Tone
+
+**Action:** Sit or kneel. Let your spine rise naturally.
+
+**Line:** *"In silence, the world speaks."*
+
+**Inner task:** Feel the hum beneath your awareness. It doesn't matter if you imagine it — imagination is the gateway. The body registers what the conscious mind hasn't approved yet. Let it.
+
+---
+
+### Phase 6. Union: Becoming the Emotion That Survives Everything
+
+**Action:** Touch fingertips to heart.
+
+**Line:** *"I am the form that Love takes when it chooses to endure."*
+
+**Inner task:** Let the sensation of warmth or openness expand without forcing it. If it doesn't come, sit with the intention. The intention is enough to begin. The feeling follows the practice.
+
+---
+
+### Phase 7. Return: Embodying the Completed Myth
+
+**Action:** Rise. Open your eyes fully.
+
+**Line:** *"I return bearing what I refused to abandon."*
+
+**Inner task:** Identify one action — not a belief, not a commitment to try — that expresses restored value. One thing you will do today from the version of yourself you just visited. That action begins the new cycle.
+
+---
+
+### Phase 7b. Grounding the Energy
+
+**Action:** Place both feet firmly on the ground.
+
+**Line:** *"The energy remains inside me until I choose its expression."*
+
+**Inner task:** Visualize the black truck parked, keys in your pocket. You decide when it moves — not instinct, not impulse. The ritual generates energy. This phase ensures it flows into action rather than spilling into performance.
+
+---
+
+## The Compressed Version
+
+Use this when time is short. Six breaths. Same mechanism, lighter contact.
+
+**1. Descent**
+Inhale the texture of being made small.
+Exhale seeing your old vehicle behind you.
+
+**2. Reflection**
+Inhale seeing the figure.
+Exhale seeing the black truck behind her.
+
+**3. Union**
+Inhale into her lungs.
+Exhale as she breathes into your body, linking both.
+
+**4. Release**
+Inhale the parasite gripping the old wheel.
+Exhale removing its keys.
+
+**5. Earth**
+Inhale the hum beneath both vehicles.
+Exhale grounding them into your center.
+
+**6. Love**
+Inhale the warmth that endures.
+Exhale as the person who can move without fear.
+
+---
+
+## The Dream Feedback Loop
+
+The ritual works on the subconscious. The subconscious responds in dreams. This is not mysticism — it is how reprogramming works.
+
+After Phase 7b, before sleep, say:
+
+*"Tonight and in nights to come, show me my progress in symbols I can recognize. Let what I'm becoming appear in forms I can read."*
+
+Then pay attention. A dream where you're scrambling to control two vehicles is not random — it is your psyche rehearsing the exact tension you're working through. A dream where both vehicles move easily is evidence. The work is holding.
+
+Keep a record. Note the vehicle, the terrain, the pressure. The symbols will evolve as you do. When the chaos city becomes a road you know, the ritual is embedding.
+
+---
+
+## The AI Synthesis
+
+After the ritual, you answer four questions and Claude reads them — not to validate, not to encourage, but to find what you didn't name.
+
+**1. Evidence Log** — What did you build, complete, or ship that didn't exist before? Not effort. Finishes.
+
+**2. Drift Audit** — Where did your time go that wasn't consistent with your stated direction? What was the *real* reason?
+
+**3. Saboteur Signature** — Did the Parasite show up? In what specific behavioral form? Not a feeling. A behavior. Name the face it wore this cycle.
+
+**4. The Non-Negotiable** — One specific artifact that will exist in the next session that doesn't exist today. Not a task. An artifact. Something that can be audited.
+
+Then Claude synthesizes. It looks for signal beneath surface content. It names patterns you're not naming. It ends with a single sentence — the heading for your next cycle. Not a plan. A direction.
+
+Three tones available:
+
+- **Direct** — Peer-level. No softening. Precise on both progress and concern.
+- **Supportive** — Honest and warm. The signal surfaces, not disappears.
+- **Clinical** — Neutral. Describes what the data shows. Leaves interpretation to you.
 
 ---
 
@@ -91,8 +203,7 @@ The quarterly session reads recent bi-weekly sessions as context. It looks for r
 ### Prerequisites
 
 - Python 3.11+
-- Anthropic API key (Claude Opus — CLI)
-- OpenAI API key (web interface)
+- Anthropic API key
 
 ### Install
 
@@ -110,14 +221,13 @@ cp .env.example .env
 python compass.py --setup
 ```
 
-The setup wizard takes about five minutes. It captures your context, your primary tracks, your time horizon, your known saboteur signatures, and your preferred synthesis tone. This profile shapes every future synthesis. You can update it anytime by editing `~/.compass_config.json`.
+The setup wizard captures your context, your primary tracks, your time horizon, your known saboteur signatures, and your synthesis tone. This profile shapes every future synthesis. Update it anytime by editing `~/.compass_config.json`.
 
 ### Run a session
 
 ```bash
-python compass.py                    # bi-weekly
-python compass.py --mode quarterly   # quarterly audit
-python compass.py --review           # review recent sessions
+python compass.py          # daily session
+python compass.py --review # review recent sessions
 ```
 
 ### Web interface
@@ -127,181 +237,38 @@ python compass_web.py
 # http://localhost:5050
 ```
 
-For persistent deployment behind nginx, set `PORT` in your environment.
-
-### Bi-weekly reminder
-
-```cron
-0 9 * * 4 [ $(( $(date +\%W) \% 2 )) -eq 1 ] && python /path/to/compass/compass_remind.py
-```
-
-Writes a flag to `~/.compass_due`. Check it however you prefer.
+Stateless Flask app. No data stored server-side. Each session lives only in your browser. Deploy on your own VPS and share with people you trust. Every person configures their own context, their own tracks, their own saboteur signatures.
 
 ---
 
-## Configuration
+## What You're Actually Doing
 
-The CLI stores your profile at `~/.compass_config.json`:
+You are training your nervous system to stop treating scarcity as a law of nature.
 
-```json
-{
-  "name": "Your name",
-  "primary_context": "2-4 sentences. Who you are, what you're building, the core tension you're navigating.",
-  "primary_tracks": [
-    "The specific direction you're building toward",
-    "A second track if relevant"
-  ],
-  "time_horizon": "6 months",
-  "saboteur_signatures": [
-    "avoidance of highest-leverage work",
-    "overengineering before validating"
-  ],
-  "psychological_phase": "optional — where you are, not how you feel",
-  "synthesis_tone": "direct"
-}
-```
+The Parasite of Value-Inversion is not a concept. It is a behavioral program installed early, when you were small enough that shrinking seemed like survival. It doesn't feel like fear — it feels like *wisdom*. It feels like prudence. It feels like *you*.
 
-The `saboteur_signatures` field is the one most people underinvest in. These aren't character flaws or emotional states. They're specific behavioral patterns — the exact moves your internal critic makes when it wants to slow you down. The more precisely you name them, the more precisely the synthesis can track whether they showed up.
+The ritual introduces a wedge between the program and your identity. Every day you perform it, the wedge goes a little deeper. The program loses a little more of its ability to pass itself off as your own voice.
 
-The `primary_context` field is the one that changes most over time. Update it when your situation changes. The synthesis reads from it on every session.
+This is slow. And then it isn't.
 
-The web interface takes the same fields as a form on each visit — no persistent server-side config, full personalization per session.
+The AI synthesis does something different than journaling. It holds your stated intentions against your reported behavior and names the gap with precision. The patterns that were invisible become visible. The visible patterns lose their power.
+
+That's the whole thing.
+
+The ritual opens the channel. The synthesis audits the result. You do the work.
 
 ---
 
-## Second Brain Integration
+## The Creed
 
-The CLI optionally ingests sessions into a Supabase-backed second brain. It attempts to import `log_pipeline_output` from `~/second-brain/ingest.py`. If the module isn't found, it skips silently.
-
-When ingestion is active, sessions are stored as memories in the `personal_development` project (configurable) with full metadata: session type, date, non-negotiable, synthesis. This makes session history searchable and linkable to other memories — projects, decisions, insights — in the brain.
-
----
-
-## The Deeper Use
-
-The four questions aren't arbitrary. They're designed to cut through the narrative you tell yourself about your own productivity and surface what's actually happening.
-
-Most people know, at some level, what their saboteur looks like. They've felt its effects for years. They've never named it precisely enough to track it.
-
-The act of naming it — in a specific, behavioral form, every two weeks, in writing — does something different than journaling about it. It makes it auditable. The synthesis reads it against the context of what you said you were building. It looks for whether the same pattern is recurring. Over enough sessions, you start to see the shape of the thing.
-
-That's the practice.
-
-The AI doesn't fix anything. It reflects. You do the work.
+*I remember the descent and I am not afraid of it.*
+*I face the one who knows me without comfort.*
+*I have been consumed and I have not been erased.*
+*The Parasite is weightless. Its keys are mine.*
+*The Earth holds what I cannot.*
+*I am the form that Love takes when it chooses to endure.*
+*I return. I act. The cycle begins again.*
 
 ---
 
-## Example Config
-
-```json
-{
-  "name": "J",
-  "primary_context": "Building an AI-native content and intelligence infrastructure. Currently managing 3 active revenue streams while building toward a consolidated system that runs mostly autonomously. Core tension: breadth of vision vs. depth of execution.",
-  "primary_tracks": [
-    "Ship the autonomous content pipeline before end of Q2",
-    "Reduce time spent on operations that don't compound"
-  ],
-  "time_horizon": "6 months",
-  "saboteur_signatures": [
-    "research loops that substitute for shipping",
-    "optimizing systems that are good enough",
-    "context-switching to low-stakes problems when the real work feels uncertain"
-  ],
-  "psychological_phase": "consolidation — closing loops, not opening new ones",
-  "synthesis_tone": "direct",
-  "optional_signal_field": true
-}
-```
-
----
-
-## Example Session
-
-```
-══════════════════════════════════════════════════════════
-  THE COMPASS — Bi-Weekly Session
-══════════════════════════════════════════════════════════
-
-  Thursday, March 25, 2026
-  Session type: Bi-Weekly Calibration
-
-────────────────────────────────────────────────────────
-  1 / 4  —  EVIDENCE LOG
-────────────────────────────────────────────────────────
-
-  What did you build, ship, or complete in the past two weeks
-  that didn't exist before? Verifiable outputs only.
-  Not learning, not planning, not starting. Finishes.
-
-  > Shipped the ingest pipeline for YouTube + podcast channels.
-    Fixed three production bugs in the morning brief cron.
-    Published two articles on the Tarotsmith site.
-
-────────────────────────────────────────────────────────
-  2 / 4  —  DRIFT AUDIT
-────────────────────────────────────────────────────────
-
-  Where did you spend time that wasn't consistent with your
-  primary track? What was the real reason?
-
-  > Spent about 6 hours across the two weeks researching
-    podcast distribution platforms. The pipeline wasn't
-    ready to distribute yet. Real reason: the next step
-    (NotebookLM audio generation) felt uncertain and I
-    substituted research for the thing I didn't know how to do.
-
-────────────────────────────────────────────────────────
-  3 / 4  —  SABOTEUR SIGNATURE
-────────────────────────────────────────────────────────
-
-  Did the internal critic show up in the past two weeks?
-  In what specific behavioral form?
-
-  > Yes. Research loop. When the NotebookLM API wasn't
-    working on the first try, I spent two hours reading
-    documentation instead of just reading the source code.
-    Same pattern as last cycle, different surface.
-
-────────────────────────────────────────────────────────
-  4 / 4  —  NEXT FORTNIGHT'S NON-NEGOTIABLE
-────────────────────────────────────────────────────────
-
-  One specific output that will exist two weeks from now
-  that doesn't exist today. Not a task. An artifact.
-
-  > A working RSS feed at tubecap.mydomain.com with at
-    least one published episode.
-
-··········································································
-  SYNTHESIZING
-··········································································
-
-══════════════════════════════════════════════════════════
-  COMPASS SYNTHESIS
-══════════════════════════════════════════════════════════
-
-The pipeline shipped. That's real. Three production fixes
-and two articles on top of new infrastructure is solid
-evidence of movement.
-
-The drift pattern is worth watching: research-as-avoidance
-has appeared in two consecutive cycles now, both times
-triggered by API uncertainty rather than genuine knowledge
-gaps. This isn't a curiosity reflex — it's a delay
-mechanism. The tell is that the research never resolved
-the uncertainty; shipping did.
-
-The non-negotiable is specific. An RSS feed with a live
-episode is auditable. That's correct.
-
-The question to carry: when the next API integration
-breaks, what's the decision rule for when to read the
-docs versus when to read the source?
-
-*Two weeks of shipping things that break on contact with
-reality.*
-```
-
----
-
-*Part of a personal AI infrastructure stack. Built for people who are serious about the gap between who they are and who they intend to be.*
+*Built from a practice that worked. Shared for people who are ready to begin.*

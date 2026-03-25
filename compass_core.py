@@ -66,7 +66,7 @@ YOUR FUNCTION IN THIS SESSION:
 
 TONE: {tone_str}
 
-End with a single sentence — the heading for the next two weeks. Not a goal list. A direction."""
+End with a single sentence — the heading for the next session. Not a goal list. A direction."""
 
     return prompt
 
@@ -98,7 +98,7 @@ YOUR FUNCTION:
 3. A single paragraph stating where this person actually is — not where they hoped to be.
 4. The heading for the next quarter — one clear direction, not a plan.
 
-Be harder here than in the bi-weekly sessions. Quarterly calibration is the moment for full honesty.
+Be harder here than in the daily sessions. Quarterly calibration is the moment for full honesty.
 Patterns that appeared as isolated data points in individual sessions become signal at this scale."""
 
 
@@ -114,7 +114,7 @@ def synthesize(system_prompt: str, session_text: str, max_tokens: int = 600) -> 
 
 
 def build_biweekly_session_text(responses: dict) -> str:
-    text = f"""BI-WEEKLY COMPASS SESSION — {responses.get('session_date', '')}
+    text = f"""COMPASS SESSION — {responses.get('session_date', '')}
 
 EVIDENCE LOG (what was built/shipped/completed):
 {responses.get('evidence_log', '')}
@@ -125,7 +125,7 @@ DRIFT AUDIT (where time was misaligned, real reason):
 SABOTEUR SIGNATURE (how the internal critic showed up):
 {responses.get('saboteur_signature', '')}
 
-NON-NEGOTIABLE (specific output committed to for next two weeks):
+NON-NEGOTIABLE (specific output committed to for next session):
 {responses.get('non_negotiable', '')}
 """
     if responses.get("signal_note"):
