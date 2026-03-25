@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Compass — Bi-Weekly Calibration</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f0f0f;
+      --surface:  #1a1a1a;
+      --border:   #2e2e2e;
+      --text:     #e8e8e8;
+      --muted:    #888;
+      --accent:   #c8a96e;
+      --danger:   #c0392b;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', serif;
+      line-height: 1.7;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .field-group {
+      margin-bottom: 1.75rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: var(--text);
+    }
+
+    label .hint {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+      font-style: italic;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.92rem;
+      padding: 0.65rem 0.75rem;
+      transition: border-color 0.15s;
+    }
+
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    select option { background: var(--surface); }
+
+    textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+    textarea.tall { min-height: 140px; }
+
+    .row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 540px) { .row-2 { grid-template-columns: 1fr; } }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    .question-number {
+      display: inline-block;
+      width: 1.6rem;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      text-align: center;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: 0.8rem;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .question-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .question-label span.text {
+      font-size: 0.95rem;
+    }
+
+    .question-label .hint {
+      display: block;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+
+    .error-banner {
+      background: rgba(192, 57, 43, 0.15);
+      border: 1px solid var(--danger);
+      border-radius: 3px;
+      color: #e57368;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .submit-row {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    button[type="submit"] {
+      background: var(--accent);
+      border: none;
+      border-radius: 3px;
+      color: var(--bg);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      padding: 0.85rem 3rem;
+      text-transform: uppercase;
+      transition: opacity 0.15s;
+    }
+
+    button[type="submit"]:hover { opacity: 0.85; }
+
+    .footer-note {
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>The Compass</h1>
+      <p>Bi-weekly self-calibration. Four questions. One synthesis. No fluff.</p>
+    </header>
+
+    {% if error %}
+    <div class="error-banner">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/synthesize">
+
+      <!-- ── CONTEXT ─────────────────────────────────────────────────────── -->
+      <p class="section-title">Your Context</p>
+      <p style="color:var(--muted);font-size:0.87rem;margin-bottom:1.5rem;">
+        This shapes how the synthesis reads your responses. Fill it in once per session.
+      </p>
+
+      <div class="field-group">
+        <label for="name">Name
+          <span class="hint">What should the Compass call you?</span>
+        </label>
+        <input type="text" id="name" name="name" placeholder="Your name"
+               value="{{ prefill.name if prefill else '' }}">
+      </div>
+
+      <div class="field-group">
+        <label for="primary_context">Current situation
+          <span class="hint">2–4 sentences. Who are you, what are you building, what's the core tension?</span>
+        </label>
+        <textarea id="primary_context" name="primary_context" class="tall"
+                  placeholder="e.g. I'm doing deep work to shift out of a scarcity identity I've carried my whole life. I know what I want to become — someone who moves through the world with confidence and ease — but my default self still hoards, over-controls, and braces for loss. The tension lives in my body, not just my head.">{{ prefill.primary_context if prefill else '' }}</textarea>
+      </div>
+
+      <div class="row-2">
+        <div class="field-group">
+          <label for="primary_tracks">Primary tracks
+            <span class="hint">1–3 goals, one per line.</span>
+          </label>
+          <textarea id="primary_tracks" name="primary_tracks"
+                    placeholder="Integrate abundance into my daily identity&#10;Complete the ritual practice consistently&#10;Build a life that reflects who I'm becoming">{{ prefill.primary_tracks if prefill else '' }}</textarea>
+        </div>
+        <div class="field-group">
+          <label for="saboteur_signatures">Saboteur signatures
+            <span class="hint">How your inner critic shows up as behaviour, one per line.</span>
+          </label>
+          <textarea id="saboteur_signatures" name="saboteur_signatures"
+                    placeholder="Performing instead of feeling — dark humor when real energy starts moving&#10;Scarcity reflex around anything that feels like waste or excess&#10;Overshoot into chaos when genuine transformation gets close">{{ prefill.saboteur_signatures if prefill else '' }}</textarea>
+        </div>
+      </div>
+
+      <div class="row-2">
+        <div class="field-group">
+          <label for="time_horizon">Time horizon
+            <span class="hint">e.g. 6 months, end of Q3 2026</span>
+          </label>
+          <input type="text" id="time_horizon" name="time_horizon"
+                 placeholder="6 months"
+                 value="{{ prefill.time_horizon if prefill else '' }}">
+        </div>
+        <div class="field-group">
+          <label for="synthesis_tone">Synthesis tone</label>
+          <select id="synthesis_tone" name="synthesis_tone">
+            <option value="direct"     {% if not prefill or prefill.synthesis_tone == 'direct'     %}selected{% endif %}>Direct — peer-level, no hedging</option>
+            <option value="supportive" {% if prefill and prefill.synthesis_tone == 'supportive' %}selected{% endif %}>Supportive — honest but warm</option>
+            <option value="clinical"   {% if prefill and prefill.synthesis_tone == 'clinical'   %}selected{% endif %}>Clinical — neutral, analytical</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label for="psychological_phase">Current psychological phase
+          <span class="hint">Optional. e.g. "Building execution identity", "Clearing old patterns". Leave blank to skip.</span>
+        </label>
+        <input type="text" id="psychological_phase" name="psychological_phase"
+               placeholder="e.g. Integrating abundance — learning to let things flow without gripping them"
+               value="{{ prefill.psychological_phase if prefill else '' }}">
+      </div>
+
+      <hr class="divider">
+
+      <!-- ── SESSION ────────────────────────────────────────────────────── -->
+      <p class="section-title">This Session</p>
+
+      <div class="field-group">
+        <div class="question-label">
+          <span class="question-number">1</span>
+          <span class="text">Evidence Log
+            <span class="hint">What did you build, ship, or complete in the past two weeks that didn't exist before?<br>Verifiable outputs only — not learning, not planning. Finishes.</span>
+          </span>
+        </div>
+        <textarea name="evidence_log" class="tall"
+                  placeholder="e.g. Did the ritual 9 out of 14 nights. On night 6, the visualization held for the first time without my mind breaking away — I stayed with both vehicles for the full phase. Had a dream on night 8 where I was driving calmly through the city instead of scrambling. Wrote it down immediately.">{{ prefill.evidence_log if prefill else '' }}</textarea>
+      </div>
+
+      <div class="field-group">
+        <div class="question-label">
+          <span class="question-number">2</span>
+          <span class="text">Drift Audit
+            <span class="hint">Where did you spend time that wasn't consistent with your primary track? What was the real reason?</span>
+          </span>
+        </div>
+        <textarea name="drift_audit" class="tall"
+                  placeholder="e.g. Skipped the ritual three nights in a row and told myself I was too tired. Real reason: the work was starting to land and part of me didn't want it to. Also spent a whole evening in a group conversation performing dark humor instead of just being present. The energy was real — I just routed it sideways.">{{ prefill.drift_audit if prefill else '' }}</textarea>
+      </div>
+
+      <div class="field-group">
+        <div class="question-label">
+          <span class="question-number">3</span>
+          <span class="text">Saboteur Signature
+            <span class="hint">Did the internal critic show up? In what specific behavioural form — avoidance, overengineering, social friction, drift to low-leverage work?</span>
+          </span>
+        </div>
+        <textarea name="saboteur_signature" class="tall"
+                  placeholder="e.g. Yes — the clown showed up instead of the driver. Something real started moving and instead of sitting with it, I went straight into provocation mode: big joke, wrong room, genuine offense caused. It wasn't malicious. It was a release valve. But it was also the saboteur doing what it does — turning real feeling into performance before it can land.">{{ prefill.saboteur_signature if prefill else '' }}</textarea>
+      </div>
+
+      <div class="field-group">
+        <div class="question-label">
+          <span class="question-number">4</span>
+          <span class="text">Non-Negotiable
+            <span class="hint">One specific output that will exist two weeks from now that doesn't exist today. Not a task. An artifact.</span>
+          </span>
+        </div>
+        <textarea name="non_negotiable" style="min-height:80px;"
+                  placeholder="e.g. 14 consecutive nights of the ritual — no skipping. Change it, deepen it, let it evolve, but show up every night. The unbroken streak is the artifact.">{{ prefill.non_negotiable if prefill else '' }}</textarea>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit">Run Synthesis</button>
+        <p class="footer-note">Your responses are not stored. Each session is processed and discarded.</p>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
