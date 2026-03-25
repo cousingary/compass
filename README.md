@@ -178,7 +178,9 @@ Keep a record. Note the vehicle, the terrain, the pressure. The symbols will evo
 
 ## The AI Synthesis
 
-After the ritual, you answer four questions and Claude reads them — not to validate, not to encourage, but to find what you didn't name.
+After the ritual, you answer four questions and an AI reads them — not to validate, not to encourage, but to find what you didn't name.
+
+This tool is built around the Anthropic API, but the practice works with any AI you trust: Claude, ChatGPT, Gemini, or a local model. The synthesis prompt is simple enough to run in any chat interface. If you don't want to self-host, just paste your four answers directly into a conversation with your preferred AI and ask it to synthesize against your stated context, tracks, and known saboteur patterns. The synthesis will still find the signal. The tool just makes it consistent.
 
 **1. Evidence Log** — What did you build, complete, or ship that didn't exist before? Not effort. Finishes.
 
@@ -195,6 +197,12 @@ Three tones available:
 - **Direct** — Peer-level. No softening. Precise on both progress and concern.
 - **Supportive** — Honest and warm. The signal surfaces, not disappears.
 - **Clinical** — Neutral. Describes what the data shows. Leaves interpretation to you.
+
+### Keeping the Thread Alive
+
+After your first session, save the synthesis. Then bring it into your next AI conversation as context — paste it at the top before answering the four questions again. Over time this creates a living record: the AI can read not just today's session but the arc of sessions before it. Patterns that appeared once become visible at scale. The synthesis gets sharper the longer the thread runs.
+
+You don't need a database. You don't need the CLI. A folder of saved PDFs and a chat window is enough to build a months-long record of a person in transformation.
 
 ---
 
@@ -256,6 +264,8 @@ The AI synthesis does something different than journaling. It holds your stated 
 That's the whole thing.
 
 The ritual opens the channel. The synthesis audits the result. You do the work.
+
+Do this every day for three months. You may not recognize yourself.
 
 ---
 
